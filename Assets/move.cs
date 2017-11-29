@@ -21,10 +21,13 @@ public class move : MonoBehaviour {
 		
 		}
 
-		if (Input.GetKey(KeyCode.LeftArrow))
-			transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime);
-		else if (Input.GetKey(KeyCode.RightArrow))
-			transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+		var vertical = Input.GetAxis ("Vertical"); 
+		//if (vertical > 0)
+			transform.Rotate(Vector3.up * -vertical * rotateSpeed * Time.deltaTime);
+		//else if (vertical < 0)
+		//	transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+
+
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 	}

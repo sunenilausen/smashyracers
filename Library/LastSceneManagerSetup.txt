@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/elvis.unity
+- path: Assets/scenes/elvis.unity
   isLoaded: 1
   isActive: 1
